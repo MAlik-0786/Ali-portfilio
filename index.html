@@ -11,15 +11,33 @@
   <style>
    body {
             font-family: "Roboto", sans-serif;
-            margin: 16px;
+            /* margin: 16px; */
            
         }
         .navbar{
           background-color: #032f30;
         }
+        @media screen and (max-width: 767px) {
+          #about{
+            align-items: center;
+            text-align: center;
+          }
+        }
+        #resume_btn,#submitbtn{
+          background-color: #032f30;
+        }
+        #fotter{
+          background-color: #032f30;
+        }
+        #projects,#contact{
+          background-color: rgb(206,214,210);
+        }
+       label{
+          font-weight: bold;
+        }
   </style>
  </head>
- <body class="bg-light text-dark">
+ <body class=" text-dark">
   <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
    <div class="container">
     <a class="navbar-brand font-weight-bold" href="#">
@@ -56,8 +74,8 @@
    </div>
   </nav>
   <!-- hero section start -->
-  <section class="text-center text-white bg-primary py-5 mt-5">
-   <img alt="Abstract background with purple and gold hues" class="img-fluid w-100 h-100   position-absolute" height="600" src="./image/hero.jpg" style="opacity: 0.5; top: 0; left: 0;" width="1920"/>
+  <section class="text-center text-white mx-3 py-5 mt-5 mb-0" style="background-color: #0f6061;">
+   <img alt="Abstract background with purple and gold hues" class="img-fluid w-100 h-100   position-absolute" height="600" src="./image/hero.jpg" style="opacity: 0.2; top: 0; left: 0;  box-shadow: 0px 15px 10px 10px rgb(5, 50, 65);;" width="1920"/>
    <div class="container position-relative">
     <h1 class="display-4 font-weight-bold">
      Welcome to My Portfolio
@@ -75,8 +93,9 @@
       <img alt="Portrait of the developer" class="rounded-circle img-fluid mx-auto d-block" height="400" src="./image/ali.jpeg" width="400"/>
      </div>
      <div class="col-md-6 mt-4 mt-md-0">
-      <h2 class="font-weight-bold">
+      <h2 class="font-weight-bold ">
        About Me
+       <hr>
       </h2>
       <p class="mt-4 ">
        Hello I'm Ashiph Ali,
@@ -85,17 +104,22 @@
                     creating seamless and engaging web applications. With a solid background in both front-end 
                     and back-end development, I specialize in transforming ideas into functional, user-friendly digital experiences.
       </p>
+      <a id="resume_btn" class="text-white px-2 py-2 rounded inline-flex items-center" download="" href="resume.pdf">
+        <i class="fas fa-download mr-2">
+        </i>
+        Download Resume
+       </a>
      </div>
     </div>
    </div>
   </section>
-  <section class="py-4  " id="projects" style="background-color: rgb(241, 238, 238);">
+  <section class="py-4  " id="projects" >
    <div class="container">
     <h2 class="font-weight-bold text-center">
      Projects <hr>
     </h2>
     <div class="row mt-4">
-     <div class="col-md-4 mb-4">
+     <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
       <a class="card h-100 text-dark text-decoration-none p-2" href="https://todormd.netlify.app/" target="_blank">
        <img alt="Screenshot of Project 1" class="card-img-top" height="300" src="./image/todo.png" width="400"/>
        <div class="card-body">
@@ -147,7 +171,7 @@
        </div>
       </a>
      </div>
-     <div class="col-md-4 mb-4">
+     <!-- <div class="col-md-4 mb-4">
       <a class="card h-100 text-dark text-decoration-none p-2" href="#">
        <img alt="Screenshot of Project 5" class="card-img-top" height="300" src="https://storage.googleapis.com/a1aa/image/Sbs8wj79iI6RIZiaijK61JPNr9yfQ8aJd6ajzyqkd9RtbYfTA.jpg" width="400"/>
        <div class="card-body">
@@ -159,7 +183,7 @@
         </p>
        </div>
       </a>
-     </div>
+     </div> -->
     </div>
    </div>
   </section>
@@ -208,7 +232,7 @@
    </div>
   </section>
   <!-- contact section start -->
-  <section class="py-5" id="contact" style="background-color:  rgb(241, 238, 238);">
+  <section class="py-5" id="contact" >
    <div class="container">
     <h2 class="font-weight-bold text-center">
      Contact Me <hr>
@@ -222,7 +246,7 @@
         <label for="name">
          Name
         </label>
-        <input class="form-control" name="name" id="name" required="" type="text"/>
+        <input class="form-control " name="name" id="name" required="" type="text"/>
        </div>
        <div class="form-group">
         <label for="email">
@@ -237,7 +261,7 @@
         <textarea class="form-control" name="message" id="message" required="" rows="4">
         </textarea>
        </div>
-       <button class="btn btn-primary btn-block" type="submit">
+       <button id="submitbtn" class="btn text-white btn-block" type="submit" >
         Send
        </button>
       </form>
@@ -246,7 +270,7 @@
    </div>
   </section>
   <!-- contact section end -->
-  <footer class="bg-primary text-white py-4">
+  <footer id="fotter" class=" text-white py-4">
    <div class="container text-center">
     <p>
      © 2024 Ashiph Ali. All rights reserved.
@@ -257,8 +281,7 @@
       </i>
      </a>
      <a class="text-white mx-2" href="#">
-      <i class="fab fa-twitter">
-      </i>
+      <i class="fab fa-twitter"></i>
      </a>
      <a class="text-white mx-2" href="https://www.linkedin.com/in/ashiph-ali-2a444b233/" target="_blank">
       <i class="fab fa-linkedin-in">
